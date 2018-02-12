@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+       
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <form action="register" method="post" >
+            <center>
+                <h1>Register Form <a href="view">view details</a> </h1> 
+            Employee Name:<input type="text" name="name"><br><br>
+            Email Id:<input type="email" name="email"><br><br>
+            Gender:
+             <input type="radio" name="gender" value="male" > Male
+            <input type="radio" name="gender" value="female">Female<br>
+            State <select name="state" > 
+                <option value="Maharashtra" >Maharashtra</option>
+                <option value="Gujrat" >Gujrat</option>
+                <option value="MP">Madhya Pradesh</option>
+            </select>   <br><br>
+            Identity Proof:
+            
+            <input type="checkbox" name="identity" value="Adhar card" > Adhar Card
+            <input type="checkbox" name="identity" value="PAN Card"> PAN Card
+            <input type="checkbox" name="identity" value="Passport">Passport<br>
+            <div>
+                 <br> 
+                 Address<br>
+                 <textarea cols="40" rows="5" name="address"></textarea><br> 
+            </div>
+          
+            <br><input type="submit" name="submit" value="Submit"> 
+            </center>
+        </form>
+        
+    </body>
+</html>
