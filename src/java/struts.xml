@@ -1,0 +1,54 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        
+<!--for  registering the users -->
+        
+        <action name="register" class="me.java.classfiles.RegisterProcess" >
+          
+            <result name="true">index.html</result> 
+            
+        </action>
+        
+<!--  for viewing the users , it will pass the control to FetchDeatils Action  -->
+
+        <action name="view" class="me.java.classfiles.Navigate" method="navigate" >
+          
+            <result name="true" type="chain" >FetchDetails</result>
+            
+        </action>         
+                
+        
+<!--      fetching the details from the database and displaying it on viewdetails                                                                                                        -->
+        <action name="FetchDetails" class="me.java.classfiles.FetchDetails" >
+            
+            <result name="true">viewdetails.jsp</result>  
+            <result name="false">index.html</result>
+        </action>               
+                        
+                        
+<!--      deleting the employee data and sending it back to FetchDetails    -->
+        <action name="delete" class="me.java.classfiles.EmployeeDelete">
+            <result name="true" type="chain">FetchDetails</result> 
+            
+        </action>
+              
+         
+        <action name="update" class="me.java.classfiles.EmployeeUpdate">
+           
+            <result name="true">updatedetails.jsp</result> 
+            <result name="false">index.html</result>
+            
+        </action>                       
+                     
+        <action name="updaterecord" class="me.java.classfiles.EmployeeUpdateRecordSave">
+            <result name="true" type="chain">FetchDetails</result>
+            <result name="false">index.html</result>
+        </action>                        
+                                                      
+    </package>
+</struts>
