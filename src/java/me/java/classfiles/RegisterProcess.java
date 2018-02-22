@@ -26,7 +26,7 @@ public class RegisterProcess implements ModelDriven<RegisterPOJO>{
     public String execute(){
         
             RegisterDAO.getRegisterData(pojo);
-            System.out.print("ff");
+            System.out.print(pojo);
         return "true";
     }
     
