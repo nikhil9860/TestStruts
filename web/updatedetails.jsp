@@ -18,6 +18,7 @@
      <% RegisterPOJO pojo = (RegisterPOJO)session.getAttribute("information");
         String gender=pojo.getGender().toString();
         String idenity =pojo.getIdentity().toString();
+       
         %>
     
     
